@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+     
+   <!-- classPathEntry:数据库的JDBC驱动的jar包地址 -->
+   <classPathEntry location="mysql-connector-java-5.1.17.jar"/>
+    
+    <!--   如果你希望不生成和Example查询有关的内容，那么可以按照如下进行配置: targetRuntime="MyBatis3Simple-->
+    <context id="context1"  defaultModelType="flat">
+        
+        <!-- 插件 -->
+        <plugin type="org.mybatis.generator.plugins.PaginationPlugin"></plugin>
+        <plugin type="org.mybatis.generator.plugins.AutoIncIdPlugin"></plugin>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" 
+                        connectionURL="jdbc:mysql://localhost:3306/redvelvet"
+                        userId="root" 
+                        password="root"/>
+                        
+        <!-- model -->
+        <javaModelGenerator targetPackage="redvelvet.example.model" targetProject="../src/main/java">
+             <!-- 对数据库查询结果 进行 trim处理 -->
+             <property name="trimStrings" value="true" /> 
+             <!-- 定义实体基类 -->
+             <!--  <property name="rootClass" value="redvelvet.example.Model" /> -->  <!-- 内部属性不做 关系映射 -->
+        </javaModelGenerator>
+        
+        <!-- map.xml -->
+        <sqlMapGenerator targetPackage="sqlmap.generator" targetProject="../src/main/resources"/>
+        
+        
+        <!--  mapper 接口-->
+        <javaClientGenerator targetPackage="redvelvet.example.dao" targetProject="../src/main/java" type="XMLMAPPER">
+             <!-- <property name="rootInterface " value="com.gexin.oms.core.infrastructure.BaseMapper" /> -->
+        </javaClientGenerator>
+        
+        
+
+        <!-- <table tableName="user"><generatedKey column="id" sqlStatement="Mysql"/></table> -->
+        <table tableName="user"></table>
+        
+    </context>
+</generatorConfiguration>
