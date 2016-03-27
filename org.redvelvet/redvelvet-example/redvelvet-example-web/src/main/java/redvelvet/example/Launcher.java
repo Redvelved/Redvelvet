@@ -13,7 +13,7 @@ import org.redvelvet.webapp.jetty.JettyWebServer;
 public class Launcher {
 
 	public static void main(String[] args) {
-		//asadsadasddssdd
+		//!!!
 		JettyWebServer jettyWebServer=new JettyWebServer();
 		jettyWebServer.init().server();  
 	}
