@@ -28,7 +28,7 @@ public class BaseConfig implements IConfig{
     }
 
     private BaseConfig() {
-        userdir = System.getProperty("user.dir");
+        this.userdir = System.getProperty("user.dir");
         load();
     }
   
