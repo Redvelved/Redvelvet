@@ -30,7 +30,7 @@ public class JettyWebServer extends Server implements IWebServer{
 	
 	private String resourceBase;
 	private String descriptor;
-	private String context; //其实是项目名
+	private String context; //其实是rootContext名
 	
 	private ThreadPool threadPool;
 
