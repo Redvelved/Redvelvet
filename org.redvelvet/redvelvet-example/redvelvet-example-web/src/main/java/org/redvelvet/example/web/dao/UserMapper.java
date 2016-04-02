@@ -1,9 +1,9 @@
-package org.redvelvet.example.dao;
+package org.redvelvet.example.web.dao;
 
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
-import org.redvelvet.example.model.User;
-import org.redvelvet.example.model.UserExample;
+import org.redvelvet.example.web.model.User;
+import org.redvelvet.example.web.model.UserExample;
 
 public interface UserMapper {
     /**

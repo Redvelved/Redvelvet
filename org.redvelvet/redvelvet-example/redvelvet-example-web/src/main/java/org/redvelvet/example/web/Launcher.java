@@ -1,4 +1,4 @@
-package org.redvelvet.example;
+package org.redvelvet.example.web;
 
 
 import org.redvelvet.webapp.jetty.JettyWebServer;

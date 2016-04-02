@@ -1,4 +1,4 @@
-package org.redvelvet.example.model;
+package org.redvelvet.example.web.model;
 
 public class User {
     /**

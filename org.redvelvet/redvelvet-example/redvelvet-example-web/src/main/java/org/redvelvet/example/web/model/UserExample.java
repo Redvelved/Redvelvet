@@ -1,4 +1,4 @@
-package org.redvelvet.example.model;
+package org.redvelvet.example.web.model;
 
 import java.util.ArrayList;
 import java.util.List;
