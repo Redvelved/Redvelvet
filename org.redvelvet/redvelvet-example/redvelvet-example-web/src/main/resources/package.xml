@@ -41,7 +41,7 @@
 			<outputDirectory>lib</outputDirectory>
 			<scope>runtime</scope>
 			<excludes>
-				<exclude>redvelvet.example:org.redvelvet</exclude>
+				<exclude>org.redvelvet.example:org.redvelvet</exclude>
 			</excludes>
 		</dependencySet>
 	</dependencySets>

@@ -6,10 +6,10 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<mvc:annotation-driven />
+    <mvc:annotation-driven/>
 
-	<!-- 属性指定了需要扫描的类包，类包及其递归子包中所有的类都会被处理。"," 隔开 -->
-	<context:component-scan base-package="redvelvet.example.web.controllers"></context:component-scan>
+    <!-- 属性指定了需要扫描的类包，类包及其递归子包中所有的类都会被处理。"," 隔开 -->
+	<context:component-scan base-package="org.redvelvet.example.web.controllers"></context:component-scan>
 	
 	<!-- 对模型视图添加前后缀 -->
 	<bean

@@ -30,7 +30,7 @@ public class JettyWebServer extends Server implements IWebServer{
 	
 	private String resourceBase;
 	private String descriptor;
-	private String context; //其实是rootContext名
+	private String context; //其实是项目名
 	
 	private ThreadPool threadPool;
 
@@ -66,37 +66,39 @@ public class JettyWebServer extends Server implements IWebServer{
 	/**
 	 * 
 	* @Title: server 
-	* @Description: 服务启动 等待阻塞。
+	* @Description: 服务启动。(异步不阻塞)
 	* @param @return    
 	* @return JettyWebServer    返回类型 
 	* @throws
 	 */
-	public JettyWebServer server() {
-		try {
-			this.start();
-			
-			logger.debug("##############################################");
-			logger.debug("###               Redvelvet                ###");
-			logger.debug("##############################################");
-			logger.debug("###                                        ###");
-			logger.debug("###         Server Strat Successfully      ###");
-			logger.debug("###                                        ###");
-			logger.debug("##############################################");
-			
-			
-			logger.debug("# Listen Port  :{}",this.port);
-			logger.debug("# MinThreads   :{}",this.minThreads);
-			logger.debug("# MaxThreads   :{}",this.maxThreads);
-			logger.debug("# MaxIdleTime  :{}",this.maxIdleTime);
-			logger.debug("# ResourceBase :{}",this.resourceBase);
-			logger.debug("# Descriptor   :{}",this.descriptor);
-			logger.debug("# Context      :{}",this.context);
-			
-			this.join();  //同步阻塞。确保完全启动 jetty
-		} catch (Exception e) {
-			logger.error(e.getMessage());
-		}
-		return this;
+	public void server() {
+		
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				try {
+					start();
+					logger.debug("##############################################");
+					logger.debug("###               Redvelvet                ###");
+					logger.debug("##############################################");
+					logger.debug("###                                        ###");
+					logger.debug("###         Server Strat Successfully      ###");
+					logger.debug("###                                        ###");
+					logger.debug("##############################################");
+					
+					logger.debug("# Listen Port  :{}",port);
+					logger.debug("# MinThreads   :{}",minThreads);
+					logger.debug("# MaxThreads   :{}",maxThreads);
+					logger.debug("# MaxIdleTime  :{}",maxIdleTime);
+					logger.debug("# ResourceBase :{}",resourceBase);
+					logger.debug("# Descriptor   :{}",descriptor);
+					logger.debug("# Context      :{}",context);
+					join();  //同步阻塞。确保完全启动 jetty	
+				} catch (Exception e) {
+					logger.error(e.getMessage());
+				}
+			}
+		}).start();
 	}
 	/**
 	 * 

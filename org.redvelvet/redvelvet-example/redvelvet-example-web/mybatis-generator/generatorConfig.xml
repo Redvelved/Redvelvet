@@ -16,10 +16,10 @@
         <jdbcConnection driverClass="com.mysql.jdbc.Driver" 
                         connectionURL="jdbc:mysql://localhost:3306/redvelvet"
                         userId="root" 
-                        password="root"/>
+                        password="1203"/>
                         
         <!-- model -->
-        <javaModelGenerator targetPackage="redvelvet.example.model" targetProject="../src/main/java">
+        <javaModelGenerator targetPackage="org.redvelvet.example.model" targetProject="../src/main/java">
              <!-- 对数据库查询结果 进行 trim处理 -->
              <property name="trimStrings" value="true" /> 
              <!-- 定义实体基类 -->
@@ -31,7 +31,7 @@
         
         
         <!--  mapper 接口-->
-        <javaClientGenerator targetPackage="redvelvet.example.dao" targetProject="../src/main/java" type="XMLMAPPER">
+        <javaClientGenerator targetPackage="org.redvelvet.example.dao" targetProject="../src/main/java" type="XMLMAPPER">
              <!-- <property name="rootInterface " value="com.gexin.oms.core.infrastructure.BaseMapper" /> -->
         </javaClientGenerator>
         

@@ -1,7 +1,5 @@
 package org.redvelvet.core;
 
-import java.util.HashMap;
-
 /**
  * @author yzh yzh yingzh@getui.com
  * @PackageName: org.redvelvet.core

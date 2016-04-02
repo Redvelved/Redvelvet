@@ -12,7 +12,7 @@
 		http://www.springframework.org/schema/mvc
 		http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
-	<context:component-scan base-package="redvelvet.example"></context:component-scan>
+	<context:component-scan base-package="org.redvelvet.example"></context:component-scan>
 
 	<!-- 配置文件的引入 -->
 	<bean id="propertyConfigurer"

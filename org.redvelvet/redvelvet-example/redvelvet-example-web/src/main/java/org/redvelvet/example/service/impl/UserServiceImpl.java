@@ -1,9 +1,11 @@
-package redvelvet.example.service.impl;
+package org.redvelvet.example.service.impl;
 import java.util.List;
 
 import javax.annotation.Resource;
 
+import org.redvelvet.example.dao.UserMapper;
 import org.redvelvet.webapp.mybatis.Page;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.github.pagehelper.PageHelper;
@@ -12,10 +14,9 @@ import com.github.pagehelper.PageInfo;
 /*import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;*/
 
-import redvelvet.example.dao.UserMapper;
-import redvelvet.example.model.User;
-import redvelvet.example.model.UserExample;
-import redvelvet.example.service.UserService;
+import org.redvelvet.example.model.User;
+import org.redvelvet.example.model.UserExample;
+import org.redvelvet.example.service.UserService;
 
 /**   
 * @Title: UserServiceImpl.java 

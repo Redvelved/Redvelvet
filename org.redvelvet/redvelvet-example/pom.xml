@@ -10,6 +10,5 @@
   <packaging>pom</packaging>
   <modules>
       <module>redvelvet-example-web</module>
-      <module>redvelvet-example-ui</module>
   </modules>
 </project>

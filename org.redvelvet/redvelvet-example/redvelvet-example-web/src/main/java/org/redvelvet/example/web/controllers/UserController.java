@@ -1,4 +1,4 @@
-package redvelvet.example.web.controllers;
+package org.redvelvet.example.web.controllers;
 import javax.annotation.Resource;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import com.github.pagehelper.PageInfo;
-import redvelvet.example.model.User;
-import redvelvet.example.service.UserService;
+import org.redvelvet.example.model.User;
+import org.redvelvet.example.service.UserService;
 
 /**   
 * @Title: UserController.java 

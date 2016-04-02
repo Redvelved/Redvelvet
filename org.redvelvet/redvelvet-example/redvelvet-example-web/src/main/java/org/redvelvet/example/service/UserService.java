@@ -1,6 +1,6 @@
-package redvelvet.example.service;
+package org.redvelvet.example.service;
 import com.github.pagehelper.PageInfo;
-import redvelvet.example.model.User;
+import org.redvelvet.example.model.User;
 /**   
 * @Title: UserService.java 
 * @Package redvelvet.example.service 
